@@ -1,5 +1,7 @@
 const tailwind = require('../tailwind')
 
+const backgroundColor = '#941BD5'
+
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "/portfolio"
 
@@ -21,5 +23,5 @@ module.exports = {
 
   // Manifest and Progress color
   themeColor: tailwind.colors['purple-dark'],
-  backgroundColor: tailwind.colors.blue,
+  backgroundColor: backgroundColor,
 }

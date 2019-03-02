@@ -17,7 +17,7 @@ import Projects from '../views/Projects'
 import About from '../views/About'
 import Contact from '../views/Contact'
 
-import avatar from '../images/avatar.jpg'
+import avatar from '../images/avatar.png'
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -59,15 +59,53 @@ const Footer = styled.footer`
 
 const Index = () => (
   <>
-    <Layout />
+    <Layout/>
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>
-          Hello, <br /> I'm John Doe.
+          Bienvenue sur Captain Dev
         </BigTitle>
-        <Subtitle>I'm creating noice web experiences for the next generation of consumer-facing companies.</Subtitle>
+        <Subtitle>
+          Captain Dev propose une offre d'accompagnement technique pour vos équipes. <br/><br/>
+          Un coaching pour les développeurs souhaitant devenir leader technique. <br/><br/> Ainsi qu'une offre de
+          formation en ligne.
+        </Subtitle>
       </Hero>
       <Projects offset={1}>
+        <Title>Prestations</Title>
+        <ProjectsWrapper>
+          <ProjectCard
+            title="Coaching Individuel"
+            link="/invividual-coaching"
+            bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+          >
+            Accompagnement d'un développeur souhaitant devenir leader technique.
+          </ProjectCard>
+          <ProjectCard
+            title="Formation"
+            link="/training"
+            bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+          >
+            Formation d'une équipe sur les nouveaux frameworks: ReactJS, Angular 7 et VueJS
+          </ProjectCard>
+          <ProjectCard
+            title="Accompagnement Qualité"
+            link="/quality-coaching"
+            bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
+          >
+            Accompagnement sur la mise en place de bonnes pratiques, tests automatisés afin de produire un logiciel de
+            qualité
+          </ProjectCard>
+          <ProjectCard
+            title="Développement d'applications web optimisées pour le mobile"
+            link="/develop-pwa"
+            bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+          >
+            Les PWA permettent à vos site web de proposer des fonctionnalités offline tout en garantissant une performance irréprochable </ProjectCard>
+        </ProjectsWrapper>
+      </Projects>
+      {/*
+        <Projects offset={2}>
         <Title>Projects</Title>
         <ProjectsWrapper>
           <ProjectCard
@@ -99,11 +137,11 @@ const Index = () => (
             A fantasy image manipulation relocating the habitat of wild animals.
           </ProjectCard>
         </ProjectsWrapper>
-      </Projects>
+      </Projects> */}
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="John Doe"/>
           <AboutSub>
             The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
             Emoji into my speech to better express myself. Winky face.
@@ -119,21 +157,21 @@ const Index = () => (
       </About>
       <Contact offset={4}>
         <Inner>
-          <Title>Get in touch</Title>
+          <Title>Contacts</Title>
           <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            Contactez nous <a href="mailto:emmanuel@captaindev.io">par email</a> ou retrouvez nous sur les réseaux
+            sociaux:{' '}
+            sociaux: <a href="https://www.instagram.com/captaindev404/">Instagram</a> &{' '}
+            <a href="https://www.facebook.com/Captain-Dev-415521452355443/">Facebook</a> &{' '}
+            <a href="https://www.twitter.com/captaindev404/">Twitter</a>
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2019 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>. Made by{' '}
-          <a href="https://www.lekoarts.de">LekoArts</a>.
+          &copy; 2019 Captain Dev{' '}
         </Footer>
       </Contact>
     </Parallax>
   </>
-)
+);
 
 export default Index
